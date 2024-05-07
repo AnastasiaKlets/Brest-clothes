@@ -1,0 +1,42 @@
+@import 'title';
+@import "header";
+@import "monthly";
+@import "categories";
+@import "arrivals";
+@import "licenses";
+@import "sidebarAndBanner";
+@import "marquee";
+@import "getPrices";
+@import "video";
+@import "textInf";
+@import "person";
+@import "deliveryInstruction";
+@import "information";
+@import "contact";
+@import "catalog";
+@import "order";
+@import "assortment";
+@import "footer";
+@import "feedback";
+@import "consult";
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+.flex {
+	display: flex;
+}
+.trans-5 {
+  transition: 0.5s all;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 86.94%;
+    }
+    .pageUp {
+      width: 37px;
+      height: 37px;
+    }
+}

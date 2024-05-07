@@ -1,0 +1,74 @@
+@import 'base/fonts';
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  &:first-child {
+    color: #919191;
+  }
+}
+.container {
+  max-width: 1761px;
+	width: 91.72%;
+  margin: 0 auto;
+}
+
+.br {
+  display: none;
+}
+
+.links_hierarchy {
+  margin: 50px 0 20px 0;
+  display: flex;
+  gap: 10px 6px;
+  font-size: 16px;
+  a {
+    text-decoration: none;
+    color: #000;
+    &:first-child {
+      color: #919191;
+    }
+  }
+}
+.pageUp {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 11px;
+  width: 57px;
+  height: 57px;
+  img {
+    width: 100%;
+  }
+}
+
+
+@import 'blocks/title';
+@import "blocks/button";
+@import "blocks/header";
+@import "blocks/monthly";
+@import "blocks/categories";
+@import "blocks/arrivals";
+@import "blocks/licenses";
+@import "blocks/consult";
+@import "blocks/sidebarAndBanner";
+@import "blocks/marquee";
+@import "blocks/getPrices";
+@import "blocks/footer";
+@import "blocks/video";
+@import "blocks/textInf";
+@import "blocks/person";
+@import "blocks/deliveryInstruction";
+@import "blocks/information";
+@import "blocks/contact";
+@import "blocks/catalog";
+@import "blocks/order";
+@import "blocks/assortment";
+@import "blocks/feedback";
+@import 'media/general';
