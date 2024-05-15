@@ -88,7 +88,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         field = document.querySelector(fieldSelector);
 
     if (indicatorsClass) {
-        mainClass = indicatorsClass.slice(0, -11);
+        mainClass = indicatorsClass.split('.')[0].slice(0, -11);
     }
 
     let baseSlides = slides;
@@ -122,7 +122,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
     if (indicatorsClass) {
         let indicators = document.createElement('div');
-        indicators.classList.add(indicatorsClass);
+        indicators.classList.add(indicatorsClass.split('.')[0]);
         container.append(indicators);
 
         for (let i = 0; i < slides.length; i++) {
@@ -188,6 +188,13 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         changeLicensesSlide(slideIndex);
         changeActivity();
     }); 
+
+    document.querySelector(wrapperSelector).addEventListener("mouseover", () => {
+        makeTimer(1500);
+    });
+    document.querySelector(wrapperSelector).addEventListener("mouseout", () => {
+        clearInterval(timer);
+    });
 
     if (nextSlideSelector) {
         next.addEventListener("click", () => {
@@ -318,152 +325,20 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 }
 
-function timer(id, deadline) {
-    function getTimeRemaining(endtime) {
-        let days, hours, minutes, seconds;
-        const t = Date.parse(endtime) - Date.parse(new Date());
-
-        if (t <= 0) {
-            days = hours = minutes = seconds = 0;
-        } else {
-            days = Math.floor(t / (1000 * 60 * 60 * 24));
-            hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-            minutes = Math.floor((t / 1000 / 60) % 60 );
-            seconds = Math.floor((t / 1000) % 60);
-        }
-
-        return {
-            'total': t,
-            'days': days,
-            'hours': hours,
-            'minutes': minutes,
-            'seconds': seconds
-        };
-    }
-    
-    function getZero(num){
-        if (num >= 0 && num < 10) { 
-            return '0' + num;
-        } else {
-            return num;
-        }
-    }
-
-    function setClock(selector, endtime) {
-
-        const timer = document.querySelector(selector),
-            days = timer.querySelector("#days"),
-            hours = timer.querySelector('#hours'),
-            minutes = timer.querySelector('#minutes'),
-            seconds = timer.querySelector('#seconds'),
-            timeInterval = setInterval(updateClock, 1000);
-
-        updateClock();
-
-        function updateClock() {
-            const t = getTimeRemaining(endtime);
-            days.innerHTML = getZero(t.days);
-            hours.innerHTML = getZero(t.hours);
-            minutes.innerHTML = getZero(t.minutes);
-            seconds.innerHTML = getZero(t.seconds);
-            if (t.total <= 0) {
-                clearInterval(timeInterval);
-            }
-        }
-    }
-
-    setClock(id, deadline)
+if (document.querySelector('.catalog_item_field') != null) {
+    let catalog_items = document.querySelectorAll('.catalog_item');
+    catalog_items.forEach((item, index) => {
+        slider({
+            containerSelector: `.catalog_item_images.images_${index}`,
+            slideSelector: `.catalog_item_slide.slide_${index}`,
+            wrapperSelector: `.catalog_item_images.images_${index}`,
+            fieldSelector: `.catalog_item_field.field_${index}`,
+            indicatorsClass: `catalog_item_indicators.indicators_${index}`,
+            swipe: true,
+        });
+    })
 }
 
-if (document.querySelector('.categories_tab') != null) {
-    tabs('.categories_tab', '.categories_tab_item', '.categories_tab_content', '.categories_tab_header', 'categories_tab_active');
+if (document.querySelector('.catalog_items') != null) {
+    tabs('.catalog_items', '.catalog_collection', '.catalog_items_wrapper', '.catalog_collections', 'catalog_active');
 }
-if (document.querySelector('.categories_tab_row_image') != null) {
-    tabs('.categories_tab_row_image.subtab_1', '.categories_subtab_item', '.categories_subtab_content', '.categories_subtab_header', 'categories_subtab_active');
-    tabs('.categories_tab_row_image.subtab_2', '.categories_subtab_item', '.categories_subtab_content', '.categories_subtab_header', 'categories_subtab_active');
-}
-
-if (document.querySelector('.arrivals_field') != null) {
-    slider({
-        containerSelector: '.arrivals_container',
-        slideSelector: '.arrivals_slide',
-        wrapperSelector: '.arrivals_wrapper',
-        fieldSelector: '.arrivals_field',
-        indicatorsClass: 'arrivals_indicators',
-        elementsPerPage: 4,
-        elementsPerPageMobile: 2,
-        duration: 3000,
-        swipe: true,
-    });
-}
-if (document.querySelector('.licenses_field') != null) {
-    slider({
-        containerSelector: '.licenses_container',
-        slideSelector: '.licenses_slide',
-        nextSlideSelector: '.licenses_next',
-        prevSlideSelector: '.licenses_prev',
-        wrapperSelector: '.licenses_wrapper',
-        fieldSelector: '.licenses_field',
-        indicatorsClass: 'licenses_indicators',
-        elementsPerPage: 3,
-        elementsPerPageMobile: 1,
-        duration: 3000,
-        swipe: true,
-    });
-}
-if (document.querySelector('.monthly_field') != null) {
-    slider({
-        containerSelector: '.monthly_container',
-        slideSelector: '.monthly_slide',
-        nextSlideSelector: '.monthly_next',
-        prevSlideSelector: '.monthly_prev',
-        wrapperSelector: '.monthly_wrapper',
-        fieldSelector: '.monthly_field',
-        indicatorsClass: 'monthly_indicators',
-        elementsPerPage: 3,
-        elementsPerPageMobile: 2,
-        duration: 3000,
-        rowGap: 24,
-        swipe: true,
-    });
-}
-if (document.querySelector('.assortment_field') != null) {
-    slider({
-        containerSelector: '.assortment_container',
-        slideSelector: '.assortment_slide',
-        nextSlideSelector: '.assortment_next',
-        prevSlideSelector: '.assortment_prev',
-        wrapperSelector: '.assortment_wrapper',
-        fieldSelector: '.assortment_field',
-        indicatorsClass: 'assortment_indicators',
-        elementsPerPage: 3,
-        elementsPerPageMobile: 2,
-        rowGap: 24,
-        swipe: true,
-    });
-}
-
-if (document.querySelector('.monthly_timer') != null) {
-    timer('.monthly_timer', '2024-05-15');
-}
-
-if (document.querySelector('.consult') != null) {
-    modal('[data-modal]', 'data-close', '.consult');
-    modal('[data-thanks]', 'data-close', '.thanks');
-}
-
-const pageup = document.querySelector('.pageUp');
-window.addEventListener("scroll", (event) => {
-    if (window.scrollY > 1000) {
-        pageup.classList.add('show');
-    } 
-    else {
-        pageup.classList.remove('show');
-    }
-});
-
-document.querySelector('.consult_form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    closeModal('.consult');
-    openModal('.thanks');
-});
