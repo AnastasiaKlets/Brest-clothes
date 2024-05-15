@@ -1,0 +1,75 @@
+.title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  &_85{
+    font-size: 85px;
+  }
+  &_64{
+    font-size: 64px;
+  }
+  &_55{
+    font-size: 55px;
+  }
+  &_48{
+    font-size: 48px;
+  }
+  &_40{
+    font-size: 40px;
+  }
+  &_36{
+    font-size: 36px;
+  }
+  &_32{
+    font-size: 32px;
+  }
+  &_30{
+    font-size: 30px;
+  }
+  &_24{
+    font-size: 24px;
+  }
+  &_20 {
+    font-size: 20px;
+  }
+  &_16{
+    font-size: 16px;
+  }
+}
+
+.light {
+  font-weight: 300;
+}
+.medium {
+  font-weight: 500;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+
+.cofo {
+  font-family: "CoFo Sans", sans-serif;
+}
+.volkhov{
+  font-family: "Volkhov", sans-serif;
+}
+
+.titleHoverWhite{
+  text-decoration:none;
+  transition: 0.5s;
+}
+.titleHoverWhite:hover{
+  color: #ffffff;
+  transition: 0.5s;
+}
+.titleHoverBlack{
+  text-decoration:none;
+  transition: 0.5s;
+}
+.titleHoverBlack:hover{
+  color: #6C7275;
+  transition: 0.5s;
+}
