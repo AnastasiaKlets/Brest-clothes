@@ -1,94 +1,50 @@
 @font-face {
-    font-family: 'Poppins';
-    src: url('../../fonts/Poppins-Medium.eot');
-    src: local('Poppins Medium'), local('Poppins-Medium'),
-    url('../../fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/Poppins-Medium.woff2') format('woff2'),
-    url('../../fonts/Poppins-Medium.woff') format('woff'),
-    url('../../fonts/Poppins-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url('../../fonts/Poppins-Regular.eot');
-    src: local('Poppins Regular'), local('Poppins-Regular'),
-    url('../../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/Poppins-Regular.woff2') format('woff2'),
-    url('../../fonts/Poppins-Regular.woff') format('woff'),
-    url('../../fonts/Poppins-Regular.ttf') format('truetype');
+    font-family: 'Arkhip';
+    src: url('../fonts/Arkhip.eot'),
+        url('../fonts/Arkhip.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Arkhip.woff2') format('woff2'),
+        url('../fonts/Arkhip.woff') format('woff'),
+        url('../fonts/Arkhip.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url('../../fonts/Poppins-SemiBold.eot');
-    src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
-    url('../../fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/Poppins-SemiBold.woff2') format('woff2'),
-    url('../../fonts/Poppins-SemiBold.woff') format('woff'),
-    url('../../fonts/Poppins-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url('../../fonts/Poppins-Light.eot');
-    src: local('Poppins Light'), local('Poppins-Light'),
-    url('../../fonts/Poppins-Light.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/Poppins-Light.woff2') format('woff2'),
-    url('../../fonts/Poppins-Light.woff') format('woff'),
-    url('../../fonts/Poppins-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Volkhov';
-    src: url('../../fonts/Volkhov-Regular.eot');
-    src: local('Volkhov Regular'), local('Volkhov-Regular'),
-    url('../../fonts/Volkhov-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/Volkhov-Regular.woff2') format('woff2'),
-    url('../../fonts/Volkhov-Regular.woff') format('woff'),
-    url(' ../../fonts/Volkhov-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Volkhov';
-    src: url('../../fonts/Volkhov-Bold.eot');
-    src: local('Volkhov Bold'), local('Volkhov-Bold'),
-    url('../../fonts/Volkhov-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/Volkhov-Bold.woff2') format('woff2'),
-    url('../../fonts/Volkhov-Bold.woff') format('woff'),
-    url('../../fonts/Volkhov-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url('../../fonts/Roboto-Regular.eot');
-    src: local('Roboto'), local('Roboto-Regular'),
-    url('../../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/Roboto-Regular.woff2') format('woff2'),
-    url('../../fonts/Roboto-Regular.woff') format('woff'),
-    url('../../fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Digital Numbers Regular';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Digital Numbers Regular'), url('../../fonts/DigitalNumbers-Regular.woff') format('woff');
 }
 @font-face {
     font-family: 'CoFo Sans';
-    src: url('../../fonts/CoFoSans-Medium.eot');
-    src: local('CoFo Sans Medium'), local('CoFoSans-Medium'),
-    url('../../fonts/CoFoSans-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/CoFoSans-Medium.woff2') format('woff2'),
-    url('../../fonts/CoFoSans-Medium.woff') format('woff'),
-    url('../../fonts/CoFoSans-Medium.ttf') format('truetype');
+    src: url('../fonts/CoFoSans-Regular.eot'),
+        url('../fonts/CoFoSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CoFoSans-Regular.woff2') format('woff2'),
+        url('../fonts/CoFoSans-Regular.woff') format('woff'),
+        url('../fonts/CoFoSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.eot'),
+        url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.eot'),
+        url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-Medium.ttf') format('truetype');
     font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.eot'),
+        url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+        url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
 }
