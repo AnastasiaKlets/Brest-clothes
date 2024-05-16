@@ -328,14 +328,20 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 if (document.querySelector('.catalog_item_field') != null) {
     let catalog_items = document.querySelectorAll('.catalog_item');
     catalog_items.forEach((item, index) => {
-        slider({
-            containerSelector: `.catalog_item_images.images_${index}`,
-            slideSelector: `.catalog_item_slide.slide_${index}`,
-            wrapperSelector: `.catalog_item_images.images_${index}`,
-            fieldSelector: `.catalog_item_field.field_${index}`,
-            indicatorsClass: `catalog_item_indicators.indicators_${index}`,
-            swipe: true,
+        let catalog_tabs = item.querySelectorAll('.catalog_item_field');
+        catalog_tabs.forEach((item, tabIndex) => {
+            slider({
+                containerSelector: `.catalog_item_images.images_${index}${tabIndex}`,
+                slideSelector: `.catalog_item_slide.slide_${index}${tabIndex}`,
+                wrapperSelector: `.catalog_item_images.images_${index}${tabIndex}`,
+                fieldSelector: `.catalog_item_field.field_${index}${tabIndex}`,
+                indicatorsClass: `catalog_item_indicators`,
+                swipe: true,
+            });
         });
+        if (catalog_tabs.length > 1) {
+            tabs(`.catalog_item.item_${index}`, '.catalog_item_color', `.catalog_item_field.field_${index}`, '.catalog_item_colors', 'catalog_item_color_active');
+        }
     })
 }
 
