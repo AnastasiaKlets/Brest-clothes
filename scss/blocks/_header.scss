@@ -1,0 +1,25 @@
+#navbar a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  &_nav{
+    margin: 0 11% 0 0;
+  }
+  img{
+    margin:  10px 0 10px 45px;
+  }
+}
