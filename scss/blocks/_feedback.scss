@@ -1,0 +1,46 @@
+.feedback{
+  background: #f3f3f3;
+  &_wrapper{
+    &_form{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 52%;
+      &_inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &_telName{
+          display: flex;
+          gap: 35px;
+          &_input{
+            width: 100%;
+            height: 65px;
+          }
+        }
+        input{
+          border: 1px solid #000;
+          background: none;
+          padding: 0 0 0 24px;
+        }
+        input::placeholder{
+          font-size: 20px;
+          color: #000;
+        }
+        input:focus {
+          outline: none;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        &_mail{
+          height: 65px;
+        }
+        &_message {
+          height: 138px;
+        }
+      }
+    }
+    &_img{
+      display: none;
+    }
+  }
+}
