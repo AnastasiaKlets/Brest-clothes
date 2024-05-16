@@ -171,4 +171,41 @@
         background: #000;
         color: #fff;
     }
+    &_pagination {
+        display: flex;
+        justify-content: end;
+        margin-top: 69px;
+        &_wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            width: 74%;
+        }
+        &_item, &_next, &_prev {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border: 1px solid #a8a9ae;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .active {
+            border: 1px solid #000;
+        }
+        .lock {
+            background: rgba(#a8a9ae, 0.5);
+            border: none;
+        }
+        .rotate {
+            img {
+                transform: rotate(180deg);
+                filter: contrast(0);
+            }
+        }
+    }
 }
