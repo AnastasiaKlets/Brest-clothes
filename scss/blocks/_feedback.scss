@@ -1,11 +1,29 @@
 .feedback{
   background: #f3f3f3;
+  margin: 200px 0 70px;
+  display: flex;
+  gap: 90px;
+  height: 611px;
   &_wrapper{
+    padding: 40px 0 55px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     &_form{
       display: flex;
       flex-direction: column;
       gap: 10px;
-      width: 52%;
+      width: 80%;
+      button{
+        width: 55%;
+        margin-top: 10px;
+      }
+      &_title{
+        font-size: 14px;
+      }
+      &_title1{
+        margin-bottom: 20px;
+      }
       &_inputs{
         display: flex;
         flex-direction: column;
@@ -37,10 +55,22 @@
         &_message {
           height: 138px;
         }
+
       }
     }
-    &_img{
-      display: none;
+    &_imgs{
+      display: flex;
+      width: 100%;
+    }
+    &_img1{
+      position: relative;
+      top: 25px;
+      width: 448px;
+    }
+    &_img2{
+      position: relative;
+      top: -100px;
+      width: 426px;
     }
   }
 }
