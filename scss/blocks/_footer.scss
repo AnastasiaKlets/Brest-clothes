@@ -7,7 +7,47 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 40px;
+    padding-top: 60px;
+    &_inf{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      &_inf{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+    &_menu{
+      border-bottom: 1px solid #fff;
+      border-top: 1px solid #fff;
+      &_cont{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 15px 0;
+      }
+      a{
+        color: #fff;
+      }
+    }
+    &_target{
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      align-items: flex-end;
+      margin-bottom: 40px;
+      &_title{
+        font-size: 12px;
+      }
+    }
+    &_cooperate{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
   }
 
 }
