@@ -363,3 +363,14 @@ if (document.querySelector('.catalog_items') != null) {
     tabs('.catalog_items', '.catalog_collection', '.catalog_items_wrapper', '.catalog_collections', 'catalog_active');
     tabs('.catalog_items', '.catalog_dropdown_item', '.catalog_items_wrapper', '.catalog_dropdown_items', 'catalog_dropdown_active');
 }
+
+if (document.querySelector('.consult') != null) {
+    modal('[data-modal]', 'data-close', '.consult');
+    modal('[data-thanks]', 'data-close', '.thanks');
+}
+
+document.querySelector('.consult_form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    closeModal('.consult');
+    openModal('.thanks');
+});

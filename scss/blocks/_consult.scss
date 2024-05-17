@@ -1,0 +1,137 @@
+.consult, .thanks {
+    position: relative;
+    display: none;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245,245,245, 0.5);
+    &_modal {
+        position: absolute;
+        padding: 25px 34px;
+        width: 84.27%;
+        max-width: 1618px;
+        height: 95vh;
+        max-height: 914px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+    }
+    &_close {
+        position: absolute;
+        z-index: 5;
+        height: 70px;
+        top: 17px;
+        right: 19px;
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_wrapper {
+        position: relative;
+        overflow-y: auto;
+        display: flex;
+        gap: 3.8%;
+        padding: 35px 39px;
+        height: calc(100% - 50px);
+        border: 1px solid #000;
+    }
+    &_image {
+        width: 46.8%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &_content {
+        width: 49.35%;
+        &_image {
+            margin-top: 63px;
+            height: 102px;
+            width: 66.71%;
+            img {
+                height: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    &_form {
+        margin-top: 36px;
+        width: 81.22%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        &_inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 29px;
+        }
+        &_input {
+            width: 100%;
+            height: 15px;
+            padding: 14px 0 18px 0;
+            border: none;
+            border-bottom: 1px solid #9d9d9d;
+            font-weight: 400;
+            font-size: 16px;
+            color: #9d9d9d;
+            letter-spacing: 0.08em;
+            outline: none;
+            &::placeholder {
+                font-weight: 400;
+                font-size: 16px;
+                color: #9d9d9d;
+                letter-spacing: 0.08em;
+            }
+        }
+    }
+    .title_30 {
+        margin-top: 24px;
+        width: 84.49%;
+    }
+}
+.consult.show, .thanks.show {
+    animation: fadeIn 1s;
+}
+.consult.hide, .thanks.hide {
+    animation: fadeOut 1s;
+}
+.thanks {
+    &_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        &_image, .title_30 {
+            margin-top: 0;
+        }
+        .title_48 {
+            margin-top: 75px;
+        }
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        display: block;
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+    }
+}

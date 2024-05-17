@@ -140,7 +140,7 @@
                                     <div class="title title_16">Хлопок</div>
                                     <div class="title title_16">Вискоза</div>
                                 </div>
-                                <button class="button button_card">Подробнее</button>
+                                <button class="button button_card" data-modal>Подробнее</button>
                             </div>
                         </div>
                         <div class="catalog_item item_1">
@@ -443,6 +443,47 @@
             </div>
         </div>
     </section>
+    <div class="consult">
+		<div class="consult_modal">
+			<div class="consult_wrapper">
+                <div class="consult_close"><img data-close src="icons/close.svg" alt="close"></div>
+                <div class="consult_image">
+                    <img src="img/consult_bg.png" alt="consult_bg">
+                </div>
+                <div class="consult_content">
+                    <div class="consult_content_image">
+                        <img src="icons/logo.svg" alt="logo">
+                    </div>
+                    <div class="title title_30">Оставьте заявку и наши специалисты свяжутся с Вами в ближайшее время</div>
+                    <form class="consult_form" action="#">
+                        <div class="consult_form_inputs">
+                            <input type="text" name="name" placeholder="Введите имя" class="consult_form_input" required> 
+                            <input type="email" name="email" placeholder="Введите e-mail" class="consult_form_input" required> 
+                            <input type="text" name="phone" placeholder="Номер телефона" class="consult_form_input" required>
+                        </div>
+                        <button type="submit" class="button">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+		</div>
+	</div>
+    <div class="thanks">
+		<div class="thanks_modal">
+			<div class="thanks_wrapper">
+                <div class="thanks_close"><img data-close src="icons/close.svg" alt="close"></div>
+                <div class="thanks_image">
+                    <img src="img/consult_bg.png" alt="consult_bg">
+                </div>
+                <div class="thanks_content">
+                    <div class="thanks_content_image">
+                        <img src="icons/logo.svg" alt="logo">
+                    </div>
+                    <div class="title title_48">СПАСИБО ЗА ЗАКАЗ!</div>
+                    <div class="title title_30">Наши специалисты свяжутся с Вами в ближайшее время</div>
+                </div>
+            </div>
+		</div>
+	</div>
     <script src="js/script.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
