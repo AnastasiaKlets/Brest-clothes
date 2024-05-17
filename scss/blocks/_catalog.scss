@@ -41,7 +41,6 @@
         align-self: flex-start;
         width: 29.71%;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        transition: 1s;
         &_images {
             position: relative;
             overflow: hidden;
@@ -119,11 +118,6 @@
         &_indicators {
             display: none;
         }
-        &_structure {
-            max-height: 0;
-            opacity: 0;
-            transition: 0.4s;
-        }
         &:hover &_indicators {
             position: absolute;
             bottom: 5px;
@@ -132,11 +126,6 @@
             align-items: center;
             gap: 6px;
             width: 100%;
-        }
-        &:hover &_structure {
-            max-height: 200px;
-            opacity: 1;
-            transition: 0.4s;
         }
         &_dot {
             width: 9px;
@@ -207,5 +196,8 @@
                 filter: contrast(0);
             }
         }
+    }
+    &_dropdown {
+        display: none
     }
 }

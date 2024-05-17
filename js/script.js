@@ -347,4 +347,5 @@ if (document.querySelector('.catalog_item_field') != null) {
 
 if (document.querySelector('.catalog_items') != null) {
     tabs('.catalog_items', '.catalog_collection', '.catalog_items_wrapper', '.catalog_collections', 'catalog_active');
+    tabs('.catalog_items', '.catalog_dropdown_item', '.catalog_items_wrapper', '.catalog_dropdown_items', 'catalog_dropdown_active');
 }
