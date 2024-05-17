@@ -163,14 +163,9 @@
     }
     &_pagination {
         display: flex;
-        justify-content: end;
+        justify-content: center;
+        gap: 8px;
         margin-top: 69px;
-        &_wrapper {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            width: 74%;
-        }
         &_item, &_next, &_prev {
             display: flex;
             justify-content: center;

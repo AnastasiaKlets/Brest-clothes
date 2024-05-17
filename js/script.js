@@ -154,7 +154,13 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 	window.addEventListener('resize', (e) => {
         mobile = window.matchMedia('(max-width: 992px)').matches;
         mobile ? perPage = elementsPerPageMobile : perPage = elementsPerPage;
-        width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width) / perPage) + 'px'
+        width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width) / perPage) + 'px';
+        if (document.querySelector('.catalog_items') != null && width == '0px') {
+            let lengths = [];
+            let wrappers = document.querySelectorAll('.catalog_item_images');
+            wrappers.forEach(wrapper => lengths.push(Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width))));
+            width = Math.max(...lengths) + 'px';
+        }
         field.style.width = 100 * (slides.length + perPage - 1) / perPage + "%";
 
         while (field.childElementCount > baseSlides.length) {
@@ -323,6 +329,14 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         field.addEventListener('mouseup', end);
         field.addEventListener('touchend', end);
     }
+}
+
+if (document.querySelector('.catalog_dropdown') != null) {
+    document.querySelectorAll('.catalog_dropdown_item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            document.getElementById('catalog_collections').checked = false;
+        });
+    });
 }
 
 if (document.querySelector('.catalog_item_field') != null) {
