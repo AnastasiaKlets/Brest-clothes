@@ -5,9 +5,13 @@
   .header_nav{
     display: none;
   }
+  .header{
+    height: 76px;
+    align-items: center;
+  }
   .menu{
     display: inline;
-    margin: 15px 15px 0 0;
+    margin: 0 15px 0 0;
     a{
       color: #ffffff;
       margin: 0;
@@ -33,6 +37,11 @@
           width: 70%;
         }
       }
+    }
+    &_img{
+      position: absolute;
+      left: 20px;
+      top: 8px
     }
   }
   .burger-checkbox {
