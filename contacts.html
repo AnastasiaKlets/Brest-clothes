@@ -10,42 +10,120 @@
 <div id="navbar" class="header">
     <a href="#" > <img class="header_logo" src="icons/logo%20mini.svg"></a>
     <div class="header_nav">
-        <a href="#" class="title titleHoverWhite">
+        <a href="#" class="title titleHoverWhite header_a">
             Каталог
         </a>
-        <a href="#" class="title titleHoverWhite">
+        <a href="#" class="title titleHoverWhite header_a">
             О нас
         </a>
-        <a href="#" class="title titleHoverWhite">
+        <a href="#" class="title titleHoverWhite header_a">
             Сотрудничество
         </a>
-        <a href="#" class="title titleHoverWhite">
+        <a href="#" class="title titleHoverWhite header_a">
             Plus Size
         </a>
-        <a href="#" class="title titleHoverWhite">
+        <a href="#" class="title titleHoverWhite header_a">
             Контакты
         </a>
     </div>
+    <div class="menu">
+        <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+        <label for="burger-checkbox" class="burger"></label>
+        <ul class="menu-list">
+            <li>
+                <div class="menu-list_liWithList">
+                    <a href="#" class="title title_20" onclick="showBlock()">
+                        Каталог
+                    </a>
+                    <button  class="btn image-button"><img src="icons/Vector(3).svg"></button>
+                    <
+                </div>
+                <div class="block">
+                    <a href="#" class="title  header_a">
+                        Брюки
+                    </a>
+                    <a href="#" class="title  header_a">
+                        Блузы
+                    </a>
+                    <a href="#" class="title  header_a">
+                        Жакеты, жилеты
+                    </a>
+                    <a href="#" class="title  header_a">
+                        Кардиганы
+                    </a>
+                    <a href="#" class="title  header_a">
+                        Комбинезоны
+                    </a>
+                    <a href="#" class="title  header_a">
+                        Комплекты
+                    </a>
+                    <a href="#" class="title  header_a">
+                        Костюмы
+                    </a>
+                    <a href="#" class="title  header_a">
+                        Куртки
+                    </a>
+                    <a href="#" class="title header_a">
+                        Пальто
+                    </a>
+                    <a href="#" class="title header_a">
+                        Платья и сарафаны
+                    </a>
+                    <a href="#" class="title header_a">
+                        Плащи
+                    </a>
+                    <a href="#" class="title header_a">
+                        Шорты
+                    </a>
+                    <a href="#" class="title header_a">
+                        Юбки
+                    </a>
+                    <a href="#" class="title header_a">
+                        PLUS SIZE
+                    </a>
+                    <a href="#" class="title header_a">
+                        Последний размер
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="title title_20">
+                    О нас
+                </a>
+            </li>
+            <li>
+                <a href="#" class="title title_20">
+                    Сотрудничество
+                </a>
+            </li>
+            <li>
+                <a href="#" class="title title_20">
+                    Plus Size
+                </a>
+            </li>
+            <li>
+                <a href="#" class="title title_20">
+                    Контакты
+                </a>
+            </li>
+            <div class="menu_links">
+                <a href="#"><img src="icons/telegram.svg"></a>
+                <a href="#"><img src="icons/instagram.svg"></a>
+                <a href="#"><img src="icons/viber.svg"></a>
+                <a href="#"><img src="icons/whatsapp.svg"></a>
+                <a href="#"><img src="icons/youtube.svg"></a>
+                <a href="#"><img src="icons/skype.svg"></a>
+                <a href="#"><img src="icons/tiktok.svg"></a>
+            </div>
+        </ul>
+
+    </div>
 </div>
-<section class="map">
-    <div class="side">
 
-    </div>
-    <iframe style="display:none;" class="map_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.6021992578522!2d23.782632456474335!3d52.11002253246984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210ef2df83196b%3A0x584ffa9791b6f95!2zMSwg0YPQuy4g0JPRgNC-0LTQvdC10L3RgdC60LDRjyAyOS8yLCDQkdGA0LXRgdGCLCDQkdGA0LXRgdGC0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sby!4v1715861545097!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 
-    </iframe>
-    <div class="map_inf">
-        <div class="map_inf_inf">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M26.6673 16V24C26.6673 26.9455 24.2795 29.3333 21.334 29.3333H10.6673C7.7218 29.3333 5.33398 26.9455 5.33398 24V16" stroke="#141718" stroke-width="2.5" stroke-linejoin="round" />
-                <path d="M22.3586 2.66666H9.64195C7.21881 2.66666 5.0398 4.32633 4.13987 6.85739L3.12922 9.69982C2.82329 10.5602 2.61182 11.481 2.83496 12.3665C3.36342 14.4637 5.07793 16 7.11139 16C9.56598 16 11.5558 13.7614 11.5558 11C11.5558 13.7614 13.5457 16 16.0003 16C18.4549 16 20.4447 13.7614 20.4447 11C20.4447 13.7614 22.4346 16 24.8892 16C26.9226 16 28.6371 14.4637 29.1656 12.3665C29.3887 11.481 29.1773 10.5602 28.8713 9.69982L27.8607 6.85738C26.9608 4.32633 24.7817 2.66666 22.3586 2.66666Z" stroke="#141718" stroke-width="2.5" stroke-linejoin="round" />
-                <path d="M12 25.3333C12 23.1242 13.7909 21.3333 16 21.3333C18.2091 21.3333 20 23.1242 20 25.3333V29.3333H12V25.3333Z" stroke="#141718" stroke-width="2.5" stroke-linejoin="round" />
-            </svg>
-            <span class="title volkhov title_16">Address</span>
-            <span class="title title_16">Республика Беларусь, Брест ул.Гродненская 29/1</span>
-        </div>
-    </div>
-</section>
+
+
+
 
 <footer class="footer">
     <div class="footer_wrapper">

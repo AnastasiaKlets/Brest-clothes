@@ -1,13 +1,3 @@
-#navbar a {
-  float: left;
-  color: #ffffff;
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-}
 .header{
   display: flex;
   justify-content: space-between;
@@ -16,10 +6,25 @@
   top: 0;
   width: 100%;
   transition: top 0.3s;
+  &_a{
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+  }
   &_nav{
-    margin: 0 11% 0 0;
+    margin: 0 6% 0 0;
+    display:flex;
+    align-items: center;
   }
   img{
     margin:  10px 0 10px 45px;
   }
+}
+.menu{
+  display: none;
 }
