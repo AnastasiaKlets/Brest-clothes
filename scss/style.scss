@@ -16,10 +16,14 @@ a {
 .br {
   display: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 @import "blocks/title";
 @import "blocks/footer";
 @import "blocks/feedback";
 @import "blocks/button";
 @import "blocks/header";
 @import "blocks/map";
+@import "blocks/collection";
 @import 'media/general';

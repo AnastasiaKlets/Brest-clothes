@@ -1,8 +1,38 @@
-@media (max-width:1720px) {
-
+@media (max-width:1750px) {
+  .feedback{
+    gap: 60px;
+    &_wrapper{
+      &_img1{
+        position: relative;
+        top: 25px;
+        width: 450px;
+        height: 637px;
+      }
+      &_img2{
+        position: relative;
+        top: -100px;
+        width: 430px;
+        height: 661px;
+      }
+    }
+  }
 }
 @media (max-width:1600px) {
-
+  .feedback{
+    gap: 50px;
+    &_wrapper{
+      &_img1{
+        position: relative;
+        top: 25px;
+        width: 410px;
+      }
+      &_img2{
+        position: relative;
+        top: -100px;
+        width: 390px;
+      }
+    }
+  }
 }
 @media (max-width:1440px) {
 
@@ -17,5 +47,23 @@
 
 }
 @media (max-width: 480px) {
+  .feedback{
+    gap: 50px;
+    &_wrapper{
+      &_img1{
+        position: relative;
+        top: 25px;
+        width: 185px;
+        height: 264px;
 
+      }
+      &_img2{
+        position: relative;
+        top: -100px;
+        width: 175px;
+        height: 272px;
+
+      }
+    }
+  }
 }

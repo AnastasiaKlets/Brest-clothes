@@ -1,0 +1,14 @@
+.collection{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  &_title{
+    margin-left: 40px;
+  }
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+}

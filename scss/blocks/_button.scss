@@ -22,3 +22,27 @@
     box-shadow:  0 21px 35px 0 rgba(0, 0, 0, 0.3);
     transition: 0.5s;
 }
+.button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58px;
+    padding: 3px;
+    border: 2px solid #000;
+    background: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #020000;
+    &_card {
+        border: 2px solid #000;
+        background: none;
+        color: #000;
+    }
+}
+.button2:hover{
+    box-shadow:  0 21px 35px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}

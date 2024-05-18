@@ -59,17 +59,20 @@
     }
     &_imgs{
       display: flex;
+      justify-content: flex-end;
       width: 100%;
     }
     &_img1{
       position: relative;
       top: 25px;
       width: 470px;
+      height: 637px;
     }
     &_img2{
       position: relative;
       top: -100px;
       width: 450px;
+      height: 661px;
     }
   }
 }
