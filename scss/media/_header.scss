@@ -1,3 +1,17 @@
+@media (max-width: 1380px) {
+  .header{
+    img{
+      margin:  6px 0 0 15px;
+    }
+  }
+}
+@media (max-width: 1260px) {
+  .header{
+    img{
+      margin:  6px 0 0 9px;
+    }
+  }
+}
 @media (max-width: 992px) {
   .header_logo{
     display: none;
