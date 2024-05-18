@@ -331,6 +331,24 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 }
 
+let bottom_images = document.querySelectorAll('.product_images_bottom img');
+
+bottom_images.forEach(image => {
+    image.addEventListener('click', (e) => {
+        let new_src = image.getAttribute('src');
+        let main_image = document.querySelector('.product_images_main img');
+        let old_src = main_image.getAttribute('src');
+        main_image.setAttribute('src', new_src);
+        main_image.setAttribute('data-src', new_src)
+        main_image.setAttribute('data-fancybox', 'product_0')
+        image.setAttribute('src', old_src);
+        e.preventDefault();
+        document.querySelector('.product_zoom').setAttribute('data-src', new_src);
+        document.querySelector('.product_zoom').setAttribute('data-fancybox', 'product_0');
+
+    });
+}); 
+
 if (document.querySelector('.catalog_dropdown') != null) {
     document.querySelectorAll('.catalog_dropdown_item').forEach(item => {
         item.addEventListener('click', (e) => {
@@ -367,6 +385,9 @@ if (document.querySelector('.catalog_items') != null) {
 if (document.querySelector('.consult') != null) {
     modal('[data-modal]', 'data-close', '.consult');
     modal('[data-thanks]', 'data-close', '.thanks');
+}
+if (document.querySelector('.product') != null) {
+    modal('[data-product]', 'data-close', '.product');
 }
 
 document.querySelector('.consult_form').addEventListener('submit', (e) => {
