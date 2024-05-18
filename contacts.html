@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="navbar" class="header">
-    <a href="#" > <img class="header_logo" src="icons/logo%20mini.svg"></a>
+    <a href="#" > <img class="header_logo" src="icons/logo%20mini.svg" alt=""></a>
     <div class="header_nav">
         <a href="#" class="title titleHoverWhite header_a">
             Каталог
@@ -27,7 +27,7 @@
         </a>
     </div>
     <div class="menu">
-        <img class="menu_img" src="icons/logoMob.svg">
+        <img class="menu_img" src="icons/logoMob.svg" alt="">
         <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
         <label for="burger-checkbox" class="burger"></label>
         <ul class="menu-list">
@@ -36,7 +36,7 @@
                     <a href="#" class="title title_20" onclick="showBlock()">
                         Каталог
                     </a>
-                    <button  class="btn image-button"><img src="icons/Vector(3).svg"></button>
+                    <button  class="btn image-button"><img src="icons/Vector(3).svg" alt=""></button>
                     <
                 </div>
                 <div class="block">
@@ -108,35 +108,34 @@
                 </a>
             </li>
             <div class="menu_links">
-                <a href="#"><img src="icons/telegram.svg"></a>
-                <a href="#"><img src="icons/instagram.svg"></a>
-                <a href="#"><img src="icons/viber.svg"></a>
-                <a href="#"><img src="icons/whatsapp.svg"></a>
-                <a href="#"><img src="icons/youtube.svg"></a>
-                <a href="#"><img src="icons/skype.svg"></a>
-                <a href="#"><img src="icons/tiktok.svg"></a>
+                <a href="#"><img src="icons/telegram.svg" alt=""></a>
+                <a href="#"><img src="icons/instagram.svg" alt=""></a>
+                <a href="#"><img src="icons/viber.svg" alt=""></a>
+                <a href="#"><img src="icons/whatsapp.svg" alt=""></a>
+                <a href="#"><img src="icons/youtube.svg" alt=""></a>
+                <a href="#"><img src="icons/skype.svg" alt=""></a>
+                <a href="#"><img src="icons/tiktok.svg" alt=""></a>
             </div>
         </ul>
     </div>
 </div>
 <section class="map">
     <div class="map_side side">
-        <a href="#" class="map_side_a"><img class="map_side_LogoBig" src="icons/LogoBig.svg"></a>
+        <a href="#" class="map_side_a"><img class="map_side_LogoBig" src="icons/LogoBig.svg" alt=""></a>
         <div class="map_side_soc">
-            <a href="#"><img src="icons/telegram.svg"></a>
-            <a href="#"><img src="icons/instagram.svg"></a>
-            <a href="#"><img src="icons/viber.svg"></a>
-            <a href="#"><img src="icons/whatsapp.svg"></a>
-            <a href="#"><img src="icons/youtube.svg"></a>
-            <a href="#"><img src="icons/skype.svg"></a>
-            <a href="#"><img src="icons/tiktok.svg"></a>
+            <a href="#"><img src="icons/telegram.svg" alt=""></a>
+            <a href="#"><img src="icons/instagram.svg" alt=""></a>
+            <a href="#"><img src="icons/viber.svg" alt=""></a>
+            <a href="#"><img src="icons/whatsapp.svg" alt=""></a>
+            <a href="#"><img src="icons/youtube.svg" alt=""></a>
+            <a href="#"><img src="icons/skype.svg" alt=""></a>
+            <a href="#"><img src="icons/tiktok.svg" alt=""></a>
         </div>
-        <a href="#"><img class="map_side_arrow" src="icons/Arrow%201.svg"></a>
+        <a href="#feedback"><img class="map_side_arrow" src="icons/Arrow%201.svg" alt=""></a>
     </div>
     <div class="map_wrapper">
         <div class="map_wrapper_map" style="position:relative;overflow:hidden;">
            <iframe src="https://yandex.by/map-widget/v1/?ll=23.778656%2C52.117454&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzI1MjY1NjMwEkfQkdC10LvQsNGA0YPRgdGMLCDQkdGA0Y3RgdGCLCDQk9GA0L7QtNC30LXQvdGB0LrQsNGPINCy0YPQu9GW0YbQsCwgMjkvMSIKDWA6vkEVe3hQQg%2C%2C&z=17.9">
-
            </iframe>
         </div>
         <div class="map_wrapper_inf">
@@ -182,10 +181,28 @@
         </div>
     </div>
 </section>
-
-
-
-
+<div id="feedback"></div>
+<section class="feedback">
+    <div class="feedback_wrapper ">
+        <form class="feedback_wrapper_form" action="#">
+            <span class="title title_48 feedback_wrapper_form_title1">Обратная связь</span>
+            <div class="feedback_wrapper_form_inputs">
+                <div class="feedback_wrapper_form_inputs_telName">
+                    <input type="text" name="name" placeholder="Введите имя" class="feedback_wrapper_form_inputs_telName_input" required>
+                    <input type="text" name="phone" placeholder="Номер телефона" class="feedback_wrapper_form_inputs_telName_input" required>
+                </div>
+                <input type="text" name="phone" placeholder="Введите e-mail" class="feedback_wrapper_form_inputs_mail" required>
+                <input type="text" name="phone" placeholder="Введите сообщение" class="feedback_wrapper_form_inputs_message" required>
+            </div>
+            <span class="title feedback_wrapper_form_title">*Нажимая на кнопку “Отправить”, Вы даете согласие на обработку <u>Персональных данных</u></span>
+            <button type="submit" class="button">Оставить заявку</button>
+        </form>
+    </div>
+    <div class="feedback_wrapper_imgs">
+        <img src="img/feedback/feedback2.png" class="feedback_wrapper_img1 " alt="feedback">
+        <img src="img/feedback/feedback1.png" class="feedback_wrapper_img2" alt="feedback">
+    </div>
+</section>
 <footer class="footer">
     <div class="footer_wrapper">
         <div class="container">
