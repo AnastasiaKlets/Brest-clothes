@@ -6,11 +6,12 @@
   top: 0;
   width: 100%;
   transition: top 0.3s;
+  z-index: 1;
   &_a{
     float: left;
     color: #ffffff;
     text-align: center;
-    padding: 15px;
+    padding:  15px;
     text-decoration: none;
     font-size: 17px;
     display: flex;
@@ -22,7 +23,7 @@
     align-items: center;
   }
   img{
-    margin:  10px 0 10px 45px;
+    margin:  6px 0 0 45px;
   }
 }
 .menu{
