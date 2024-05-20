@@ -330,6 +330,27 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         field.addEventListener('touchend', end);
     }
 }
+let product_images = document.querySelectorAll('.product_images img');
+
+product_images.forEach(image => {
+    image.addEventListener('click', (e) => {
+        let zoom = image.getAttribute('alt') == "zoom" ? true : false;
+        product_images.forEach(image => {
+            let src = image.getAttribute('src');
+            if (image.getAttribute('alt') == "zoom") {
+                image.setAttribute('data-src', product_images[0].getAttribute('data-src'));
+            } else {
+                image.setAttribute('data-src', src);
+            }
+            if (zoom) {
+                image.setAttribute('data-fancybox', 'product_0');
+            } else {
+                image.removeAttribute('data-src');
+                image.removeAttribute('data-fancybox');
+            }
+        });
+    });
+}); 
 
 let bottom_images = document.querySelectorAll('.product_images_bottom img');
 
@@ -339,13 +360,7 @@ bottom_images.forEach(image => {
         let main_image = document.querySelector('.product_images_main img');
         let old_src = main_image.getAttribute('src');
         main_image.setAttribute('src', new_src);
-        main_image.setAttribute('data-src', new_src)
-        main_image.setAttribute('data-fancybox', 'product_0')
         image.setAttribute('src', old_src);
-        e.preventDefault();
-        document.querySelector('.product_zoom').setAttribute('data-src', new_src);
-        document.querySelector('.product_zoom').setAttribute('data-fancybox', 'product_0');
-
     });
 }); 
 
