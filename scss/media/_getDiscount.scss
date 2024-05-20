@@ -1,0 +1,108 @@
+@media (max-width:1700px) {
+  .getDiscount{
+    &_wrapper{
+      gap: 85px;
+      &_imgs{
+        img{
+          height: 283px;
+        }
+      }
+      &_text{
+        gap: 30px;
+      }
+    }
+  }
+}
+@media (max-width:1600px) {
+  .getDiscount{
+    &_wrapper{
+      gap: 70px;
+      &_imgs{
+        img{
+          height: 270px;
+        }
+      }
+      &_text{
+        gap: 25px;
+      }
+    }
+  }
+}
+@media (max-width:1440px) {
+  .getDiscount{
+    &_wrapper{
+      grid-template-columns: 45% 45% ;
+      gap: 60px;
+      &_imgs{
+        img{
+          height: 245px;
+        }
+      }
+      &_text{
+        gap: 15px;
+        button{
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .getDiscount{
+    &_wrapper{
+      gap: 40px;
+      &_imgs{
+        img{
+          height: 225px;
+        }
+      }
+      &_text{
+        button{
+          height: 35px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1020px) {
+  .getDiscount_wrapper_imgs{
+    display: none;
+  }
+  .getDiscount_wrapper_imgsMob{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+
+  .getDiscount_wrapper_text{
+    width: 100%;
+    align-items: center;
+    padding-bottom: 30px;
+    button{
+      width: 60%;
+    }
+  }
+  .getDiscount_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+  .getDiscount_wrapper_text{
+    padding-bottom: 30px;
+    button{
+      width: 85%;
+    }
+  }
+  .getDiscount_wrapper{
+    gap: 20px;
+  }
+}
