@@ -344,6 +344,8 @@ images_containers.forEach((container, index) => {
                 let src = image.getAttribute('src');
                 if (image.getAttribute('alt') == "zoom") {
                     image.setAttribute('data-src', product_images[0].getAttribute('data-src'));
+                } else if (image.getAttribute('video-src')) {
+                    image.setAttribute('data-src', image.getAttribute('video-src'));
                 } else {
                     image.setAttribute('data-src', src);
                 }
