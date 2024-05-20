@@ -36,6 +36,7 @@
     font-size: 20px;
     line-height: 120%;
     color: #020000;
+    transition: 0.7s;
     &_card {
         border: 2px solid #000;
         background: none;
@@ -43,6 +44,8 @@
     }
 }
 .button2:hover{
-    box-shadow:  0 21px 35px 0 rgba(0, 0, 0, 0.3);
-    transition: 0.5s;
+    border: 2px solid #000;
+    background: #020000;
+    color: #ffffff;
+    transition: 0.7s;
 }
