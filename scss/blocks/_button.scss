@@ -4,14 +4,15 @@
 	align-items: center;
     height: 58px;
     padding: 3px;
-    border: none;
     background: #000;
+    border: 2px solid #ffffff;
     cursor: pointer;
     text-align: center;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
     color: #fff;
+    transition: 0.7s;
     &_card {
         border: 2px solid #000;
         background: none;
@@ -19,8 +20,9 @@
     }
 }
 .button:hover{
-    box-shadow:  0 21px 35px 0 rgba(0, 0, 0, 0.3);
-    transition: 0.5s;
+    color: #020000;
+    background: #ffffff;
+    transition: 0.7s;
 }
 .button2 {
     display: flex;
@@ -29,7 +31,7 @@
     height: 58px;
     padding: 3px;
     border: 2px solid #000;
-    background: #ffffff;
+    background: none;
     cursor: pointer;
     text-align: center;
     font-weight: 400;
@@ -44,7 +46,6 @@
     }
 }
 .button2:hover{
-    border: 2px solid #000;
     background: #020000;
     color: #ffffff;
     transition: 0.7s;

@@ -38,3 +38,25 @@
     font-weight: 600;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'MontserratThin';
+    src: url('../../fonts/Montserrat-Thin.eot');
+    src: local('Montserrat Thin'), local('Montserrat-Thin'),
+    url('../../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Montserrat-Thin.woff2') format('woff2'),
+    url('../../fonts/Montserrat-Thin.woff') format('woff'),
+    url('../../fonts/Montserrat-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Volkhov';
+    src: url('../../fonts/Volkhov-Bold.eot'),
+    url('../../fonts/Volkhov-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Volkhov-Bold.woff2') format('woff2'),
+    url('../../fonts/Volkhov-Bold.woff') format('woff'),
+    url('../../fonts/Volkhov-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
