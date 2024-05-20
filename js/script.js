@@ -8,18 +8,15 @@ window.onscroll = function() {
     }
     prevScrollpos = currentScrollPos;
 }
+
 let btn = document.querySelector('.btn');
 let blockHidden = document.querySelector('.block');
-
-
 function showBlock() {
-
     if(blockHidden.classList.contains('b-show')){
         blockHidden.classList.remove('b-show');
     }
     else {
         blockHidden.classList.add('b-show');
     }
-
 }
 btn.addEventListener('click', showBlock);
