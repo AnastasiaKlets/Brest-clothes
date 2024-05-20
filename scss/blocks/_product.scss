@@ -51,6 +51,9 @@
             height: 16px;
             border-radius: 100%;
             cursor: pointer;
+            &_active {
+                box-shadow:  0 0 5px 0 rgba(0, 0, 0, 0.8);
+            }
         }
         &_sizes {
             display: flex;
@@ -138,4 +141,10 @@
             height: 100%;
         }
     }
+}
+.product.show {
+    animation: fadeIn 1s;
+}
+.product.hide {
+    animation: fadeOut 1s;
 }
