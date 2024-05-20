@@ -1,0 +1,24 @@
+.certificate{
+  margin-bottom: 45px;
+  &_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    &_text{
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    &_img{
+      display: grid;
+      grid-template-columns: 20% 20%  44%;
+      gap: 60px;
+      width: 100%;
+      justify-content: space-between;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
