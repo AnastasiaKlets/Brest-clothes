@@ -1,24 +1,31 @@
-.certificate{
-  margin-bottom: 45px;
-  &_wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 100%;
-    &_text{
+@media (max-width: 992px) {
+  .certificate{
+    margin-bottom: 45px;
+    &_wrapper{
       display: flex;
       flex-direction: column;
-      gap: 25px;
-    }
-    &_img{
-      display: grid;
-      grid-template-columns: 20% 20%  44%;
-      gap: 60px;
+      gap: 55px;
       width: 100%;
-      justify-content: space-between;
-      img{
-        width: 100%;
+      &_text{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+      &_img{
+        display: none;
+      }
+      &_swiper{
+        display: inline;
+        &_imgdes{
+          height: 60%;
+        }
       }
     }
   }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
 }
