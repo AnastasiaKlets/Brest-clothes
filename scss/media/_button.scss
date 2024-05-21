@@ -12,6 +12,8 @@
 }
 @media (max-width: 992px) {
     .button {
+        height: 50px;
+        font-size: 16px;
         &_card {
             height: 27px;
             border: 1px solid #000;

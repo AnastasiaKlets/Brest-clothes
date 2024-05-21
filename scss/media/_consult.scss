@@ -16,12 +16,9 @@
             padding: 16px 12px;
             width: calc(100% - 24px);
             max-width: none;
-            height: 95vh;
             max-height: none;
         }
         &_close {
-            position: absolute;
-            z-index: 5;
             height: 42px;
             top: 14px;
             right: 14px;
