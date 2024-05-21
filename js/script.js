@@ -75,6 +75,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     	offset = 0,
 		timer = 0,
         perPage = 1,
+        gap = 0,
 		mobile = window.matchMedia('(max-width: 992px)').matches,
         templates = [],
         mainClass,
@@ -93,30 +94,29 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
     let baseSlides = slides;
     mobile ? perPage = elementsPerPageMobile : perPage = elementsPerPage;
-	let width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width)) / perPage + 'px';
+    mobile ? gap = rowGap / 2 : gap = rowGap;
+	let width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width) / perPage - (gap * (slides.length - 1) / slides.length)) + 'px';
 
     field.style.width = 100 * (slides.length + perPage - 1) / perPage + "%";
+    field.style.columnGap = gap + "px";
 
     slides.forEach((slide, index) => {
 		slide.style.width = width;
-        if (index != 0) {
-            if (mobile) {
-                slide.style.paddingLeft = rowGap / 2 + 'px';
-            } else {
-                slide.style.paddingLeft = rowGap + 'px';
-            }
-        }
         templates[index] = slide;
 	});
 
-    for (let i = 0; i < (perPage - 1); i++) {
-        if (slideSelector.includes('licenses')) {
-            field.append(templates[i].cloneNode(true));
-        } else {
-            field.append(templates[i + 1].cloneNode(true));
+    if (slides.length != perPage) {
+        for (let i = 0; i < (perPage - 1); i++) {
+            if (slideSelector.includes('licenses')) {
+                field.append(templates[i].cloneNode(true));
+            } else {
+                field.append(templates[i + 1].cloneNode(true));
+            }
         }
+        slidesNew = document.querySelectorAll(slideSelector);
+    } else {
+        slidesNew = slides;
     }
-    slidesNew = document.querySelectorAll(slideSelector);
 
     changeLicensesSlide(slideIndex);
 
@@ -141,7 +141,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             dot.addEventListener('click', (e) => {
                 const slideTo = e.target.getAttribute('data-slide-to');
                 slideIndex = slideTo;
-                offset = deleteNotDigits(width) * (slideTo - 1);
+                offset = deleteNotDigits(width) + gap * (slideTo - 1);
                 changeLicensesSlide(slideIndex);
                 changeActivity();
                 makeTimer(duration);
@@ -154,7 +154,8 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 	window.addEventListener('resize', (e) => {
         mobile = window.matchMedia('(max-width: 992px)').matches;
         mobile ? perPage = elementsPerPageMobile : perPage = elementsPerPage;
-        width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width) / perPage) + 'px';
+        mobile ? gap = rowGap / 2 : gap = rowGap;
+        width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width) / perPage - (gap * (slides.length - 1) / slides.length)) + 'px';
         if (document.querySelector('.catalog_items') != null && width == '0px') {
             let lengths = [];
             let wrappers = document.querySelectorAll('.catalog_item_images');
@@ -162,24 +163,20 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             width = Math.max(...lengths) + 'px';
         }
         field.style.width = 100 * (slides.length + perPage - 1) / perPage + "%";
-
-        while (field.childElementCount > baseSlides.length) {
-            field.removeChild(field.lastElementChild)
-        }
-        for (let i = 0; i < (perPage - 1); i++) {
-            field.append(templates[i + 1].cloneNode(true));
+        field.style.columnGap = gap + "px";
+        
+        if (slides.length != perPage) {
+            while (field.childElementCount > baseSlides.length) {
+                field.removeChild(field.lastElementChild)
+            }
+            for (let i = 0; i < (perPage - 1); i++) {
+                field.append(templates[i + 1].cloneNode(true));
+            }
         }
 
         slidesNew = document.querySelectorAll(slideSelector);
         slidesNew.forEach((slide, index) => {
             slide.style.width = width;
-            if (index != 0) {
-                if (mobile) {
-                    slide.style.paddingLeft = rowGap / 2 + 'px';
-                } else {
-                    slide.style.paddingLeft = rowGap + 'px';
-                }
-            }
         });
         
         if (indicatorsClass) {
@@ -193,15 +190,16 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         offset = 0,
         changeLicensesSlide(slideIndex);
         changeActivity();
+        onSwipe()
     }); 
-
-    document.querySelector(wrapperSelector).addEventListener("mouseover", () => {
-        makeTimer(1500);
-    });
-    document.querySelector(wrapperSelector).addEventListener("mouseout", () => {
-        clearInterval(timer);
-    });
-
+    if (containerSelector.includes('catalog_item_images')) {
+        document.querySelector(wrapperSelector).addEventListener("mouseover", () => {
+            makeTimer(1500);
+        });
+        document.querySelector(wrapperSelector).addEventListener("mouseout", () => {
+            clearInterval(timer);
+        });
+    }
     if (nextSlideSelector) {
         next.addEventListener("click", () => {
             moveNext();
@@ -220,10 +218,10 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         if (!slideSelector.includes('assortment')) {
             field.classList.add('trans-5')
         }
-        if (offset == deleteNotDigits(width) * (slides.length - 1)) {
+        if (offset >= (deleteNotDigits(width) + gap) * (slides.length - 1)) {
 			offset = 0;
 		} else {
-			offset += deleteNotDigits(width);
+			offset += deleteNotDigits(width) + gap;
 		}
 
 		if (slideIndex == slides.length) {
@@ -240,10 +238,10 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         if (!slideSelector.includes('assortment')) {
             field.classList.add('trans-5')
         }
-        if (offset == 0) {
-			offset = deleteNotDigits(width) * (slides.length - 1);
+        if (offset < deleteNotDigits(width) ) {
+			offset = (deleteNotDigits(width) + gap) * (slides.length - 1);
 		} else {
-			offset -= deleteNotDigits(width);
+			offset -= deleteNotDigits(width) + gap;
 		}
 
 		if (slideIndex == 1) {
@@ -297,29 +295,31 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         return +str.replace(/[^\d\.]/g, '');
     }
 
-    if (swipe) {
-        let startX;
-        let endX;
+    let startX;
+    let endX;
 
-        const start = (e) => {
-            startX = e.pageX || e.touches[0].pageX;	
+    const start = (e) => {
+        startX = e.pageX || e.touches[0].pageX;	
+    }
+
+    const end = () => {
+        if (endX < startX) {
+            moveNext();
+            makeTimer(duration);
+        }  
+        if (endX > startX) {
+            movePrev();
+            makeTimer(duration);
         }
+    }
 
-        const end = () => {
-            if (endX < startX) {
-                moveNext();
-                makeTimer(duration);
-            }  
-            if (endX > startX) {
-                movePrev();
-                makeTimer(duration);
-            }
-        }
+    const move = (e) => {
+        endX = e.pageX || e.touches[0].pageX;
+    }
 
-        const move = (e) => {
-            endX = e.pageX || e.touches[0].pageX;
-        }
+    onSwipe()
 
+    function onSwipe() {
         field.addEventListener('mousedown', start);
         field.addEventListener('touchstart', start, {passive: true});
 
@@ -328,6 +328,17 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
         field.addEventListener('mouseup', end);
         field.addEventListener('touchend', end);
+
+        if (!swipe || !mobile) {
+            field.removeEventListener('mousedown', start);
+            field.removeEventListener('touchstart', start, {passive: true});
+    
+            field.removeEventListener('mousemove', move);
+            field.removeEventListener('touchmove', move, {passive: true});
+    
+            field.removeEventListener('mouseup', end);
+            field.removeEventListener('touchend', end);
+        }
     }
 }
 
@@ -384,6 +395,19 @@ if (document.querySelector('.catalog_dropdown') != null) {
         item.addEventListener('click', (e) => {
             document.getElementById('catalog_collections').checked = false;
         });
+    });
+}
+
+if (document.querySelector('.novelty_field') != null) {
+    slider({
+        containerSelector: '.novelty_container',
+        slideSelector: '.catalog_item',
+        wrapperSelector: '.novelty_wrapper',
+        fieldSelector: '.novelty_field',
+        elementsPerPage: 3,
+        elementsPerPageMobile: 1,
+        rowGap: 31,
+        swipe: true,
     });
 }
 

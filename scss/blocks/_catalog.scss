@@ -198,3 +198,14 @@
         display: none
     }
 }
+.novelty {
+    &_wrapper {
+        overflow: hidden;
+    }
+    &_field {
+        display: flex;
+    }
+    .catalog_item {
+        box-shadow: none;
+    }
+}
