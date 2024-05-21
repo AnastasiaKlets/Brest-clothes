@@ -1,0 +1,43 @@
+
+@media (max-width:1750px) {
+
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1440px) {
+
+}
+@media (max-width: 1200px) {
+  .customerOriented_wrapper_imgsvg_svg1{
+    top: 40px;
+  }
+  .customerOriented_wrapper_imgsvg_svg2{
+    bottom: 40px;
+  }
+}
+@media (max-width: 992px) {
+.customerOriented_wrapper_imgsvg{
+  display: none;
+}
+  .customerOriented{
+    &_wrapper{
+      margin-top: 50px;
+    }
+  }
+  .customerOriented_wrapper_img_img1{
+    width: 70%;
+  }
+  .customerOriented_wrapper_title{
+    margin-bottom: 20px;
+  }
+  .customerOriented_wrapper2{
+    margin-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}
