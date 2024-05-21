@@ -1,0 +1,40 @@
+.inf_wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: #ffffff;
+  &_block{
+    padding-left: 70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+  }
+  &_ul2{
+    li {
+      list-style-type: none; /* Убираем маркеры у списка */
+    }
+    li:before {
+      content: "- "; /* Добавляем в качестве маркера символ */
+    }
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &_text{
+    background: #000000;
+    color: #fff;
+    padding: 10px;
+  }
+  &_text2{
+    border: 2px solid #000000;
+    padding: 25px 100px;
+  }
+}
