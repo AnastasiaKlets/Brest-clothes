@@ -340,17 +340,23 @@ images_containers.forEach((container, index) => {
     product_images.forEach(image => {
         image.addEventListener('click', (e) => {
             let zoom = image.getAttribute('alt') == "zoom" ? true : false;
-            product_images.forEach(image => {
+            product_images.forEach((image, id) => {
+                if (id == 0 && zoom) {
+                    return;
+                }
                 let src = image.getAttribute('src');
                 if (image.getAttribute('alt') == "zoom") {
-                    image.setAttribute('data-src', product_images[0].getAttribute('data-src'));
+                    image.setAttribute('data-src', product_images[0].getAttribute('src'));
                 } else if (image.getAttribute('video-src')) {
                     image.setAttribute('data-src', image.getAttribute('video-src'));
                 } else {
                     image.setAttribute('data-src', src);
                 }
+
                 if (zoom) {
                     image.setAttribute('data-fancybox', `product_${index}`);
+                } else if (image.getAttribute('video-src')) {
+                    image.setAttribute('data-fancybox', `product_video_${index}`);
                 } else {
                     image.removeAttribute('data-src');
                     image.removeAttribute('data-fancybox');
@@ -361,6 +367,9 @@ images_containers.forEach((container, index) => {
 
     bottom_images.forEach(image => {
         image.addEventListener('click', (e) => {
+            if (image.getAttribute('video-src')) {
+                return;
+            }
             let new_src = image.getAttribute('src');
             let main_image = container.querySelector('.product_images_main img');
             let old_src = main_image.getAttribute('src');
