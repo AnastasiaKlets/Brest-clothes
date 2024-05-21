@@ -2,13 +2,8 @@
   .certificate{
     margin-bottom: 45px;
     &_wrapper{
-      display: flex;
-      flex-direction: column;
       gap: 55px;
-      width: 100%;
       &_text{
-        display: flex;
-        flex-direction: column;
         gap: 25px;
       }
       &_img{
@@ -24,8 +19,26 @@
   }
 }
 @media (max-width: 768px) {
+  .certificate{
+    margin-bottom: 50px;
+    &_wrapper{
+      gap: 30px;
+      &_text{
+        gap: 20px;
+      }
 
+    }
+  }
 }
 @media (max-width: 480px) {
+  .certificate{
+    margin-bottom: 60px;
+    &_wrapper{
+      gap: 20px;
+      &_text{
+        gap: 20px;
+      }
 
+    }
+  }
 }
