@@ -4,7 +4,7 @@
 	align-items: center;
     height: 58px;
     padding: 3px;
-    background: #000;
+    background: #000000;
     border: 2px solid #ffffff;
     cursor: pointer;
     text-align: center;
@@ -14,39 +14,20 @@
     color: #fff;
     transition: 0.7s;
     &_card {
-        border: 2px solid #000;
+        border: 2px solid #000000;
         background: none;
         color: #000;
     }
 }
 .button:hover{
-    color: #020000;
+    color: #000000;
     background: #ffffff;
+    border: 2px solid #000000;
     transition: 0.7s;
 }
-.button2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 58px;
-    padding: 3px;
-    border: 2px solid #000;
-    background: none;
-    cursor: pointer;
-    text-align: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-    color: #020000;
-    transition: 0.7s;
-    &_card {
-        border: 2px solid #000;
-        background: none;
-        color: #000;
-    }
-}
-.button2:hover{
-    background: #020000;
+
+.button_card:hover{
+    background: #000000;
     color: #ffffff;
     transition: 0.7s;
 }

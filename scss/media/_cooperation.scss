@@ -1,0 +1,46 @@
+@media (max-width:1600px) {
+  .cooperation_wrapper{
+    gap: 35px;
+    &_btn{
+      margin-top: 25px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .cooperation_wrapper{
+    gap: 25px;
+    &_text{
+      margin-top: 8px;
+    }
+    &_btn{
+      margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .cooperation_wrapper{
+    padding-top: 100px;
+    gap: 20px;
+    &_text{
+      margin-top: 5px;
+    }
+    &_logo{
+      width: 90%;
+    }
+    &_btn{
+      width: 90%;
+      margin-top: 15px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .cooperation_wrapper{
+    gap: 20px;
+    &_text{
+      margin-top: 5px;
+    }
+    &_btn{
+      margin-top: 0;
+    }
+  }
+}
