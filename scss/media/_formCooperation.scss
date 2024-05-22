@@ -55,10 +55,12 @@
               flex-direction: column;
               gap: 15px;
               height: 110px;
-
             }
             &_message{
               height: 90px;
+            }
+            input:focus {
+              padding: 0;
             }
           }
           &_span{

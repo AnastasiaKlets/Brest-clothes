@@ -1,17 +1,23 @@
 @import 'base/fonts';
+
 * {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
+
 .container {
   max-width: 1568px;
-  width: 85.666%;
+  width: 81.666%;
   margin: 0 auto;
 }
 a {
   text-decoration: none;
+  color: #000;
+  &:first-child {
+    color: #919191;
+  }
 }
 .br {
   display: none;
@@ -34,4 +40,7 @@ a {
 @import "blocks/customerOriented";
 @import "blocks/inf";
 @import "blocks/formCooperation";
+@import "blocks/catalog";
+@import "blocks/consult";
+@import "blocks/product";
 @import 'media/general';
