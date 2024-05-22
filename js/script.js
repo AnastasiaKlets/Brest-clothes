@@ -1,3 +1,5 @@
+$('input[name="phone"]').mask("+375(99)999-99-99");
+
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -20,3 +22,4 @@ function showBlock() {
     }
 }
 btn.addEventListener('click', showBlock);
+

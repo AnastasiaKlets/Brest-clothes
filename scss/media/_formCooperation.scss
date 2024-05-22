@@ -1,0 +1,49 @@
+
+@media (max-width:1720px) {
+  .formCooperation{
+    margin-bottom: 147px;
+    .container{
+      width: 79.666%
+    }
+    &_wrapper{
+      &_form{
+        padding: 40px 0 40px 40px;
+        gap: 30px;
+        &_inputs{
+          gap: 20px;
+          &_inf{
+            height: 50px;
+            &_dop{
+              gap: 20px;
+            }
+            &_message{
+              height: 138px;;
+            }
+          }
+          &_span{
+            font-size: 14px;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1440px) {
+
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}

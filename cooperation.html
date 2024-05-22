@@ -162,18 +162,65 @@
     <div class="container">
         <div class="formCooperation_wrapper">
             <div class="formCooperation_wrapper_form">
-                <span>Заполните форму сотрудничества и мы свяжемся с Вами</span>
-                <form class="contact_wrapper_inf_inputs_form feedback_wrapper_form">
-                    <div class="contact_wrapper_inf_inputs_form_inf">
-                        <input type="text" name="name" placeholder="Введите имя" class="contact_wrapper_inf_inputs_form_inf_input" required>
+                <span class="title title_32 ">Заполните форму сотрудничества и мы свяжемся с Вами</span>
+                <form class="formCooperation_wrapper_form_inputs">
+                    <div class="formCooperation_wrapper_form_inputs_inf formCooperation_wrapper_form_inputs_inf_dop">
+                        <input
+                                type="text"
+                                name="name"
+                                placeholder="Введите имя"
+                                class="formCooperation_wrapper_form_inputs_inf_input"
+                                required
+                        >
+                        <input
+                                type="text"
+                                name="lastName"
+                                placeholder="Введите фамилию"
+                                class="formCooperation_wrapper_form_inputs_inf_input"
+                                required
+                        >
                     </div>
-                    <div class="contact_wrapper_inf_inputs_form_inf">
-                        <input type="text" name="phone" placeholder="Номер телефона" class="contact_wrapper_inf_inputs_form_inf_input" required>
+                    <div class="formCooperation_wrapper_form_inputs_inf formCooperation_wrapper_form_inputs_inf_dop">
+                        <input
+                                type="text"
+                                name="city"
+                                placeholder="Введите город"
+                                class="formCooperation_wrapper_form_inputs_inf_input"
+                                required
+                        >
+                        <input
+                                type="text"
+                                name="phone"
+                                placeholder="Номер телефона"
+                                class="formCooperation_wrapper_form_inputs_inf_input"
+                                required
+                        >
                     </div>
-                    <div class="contact_wrapper_inf_inputs_form_inf">
-                        <input type="text" name="message" placeholder="Введите текст" class="contact_wrapper_inf_inputs_form_inf_input" required >
+                    <div class="formCooperation_wrapper_form_inputs_inf">
+                        <input
+                                type="text"
+                                name="email"
+                                placeholder="Введите e-mail"
+                                class="formCooperation_wrapper_form_inputs_inf_input"
+                                required
+                        >
                     </div>
-                    <button type="submit" class="button">Отправить</button>
+                    <div class="formCooperation_wrapper_form_inputs_inf formCooperation_wrapper_form_inputs_inf_message">
+                        <input
+                                type="text"
+                                name="message"
+                                placeholder="Введите текст"
+                                class="formCooperation_wrapper_form_inputs_inf_input"
+                                required
+                        >
+                    </div>
+                    <span class="title formCooperation_wrapper_form_inputs_span">*Нажимая на кнопку “Отправить”, Вы даете согласие на обработку Персональных данных</span>
+                    <button
+                            type="submit"
+                            class="button formCooperation_wrapper_form_inputs_btn"
+                    >
+                        Отправить
+                    </button>
                 </form>
             </div>
             <img src="icons/logoForm.svg" alt="logo" class="formCooperation_wrapper_logo">
