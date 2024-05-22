@@ -62,7 +62,8 @@
   transition: 0.5s;
 }
 .titleHoverWhite:hover{
-  text-shadow: 5px 7px 10px #ffffff;
+  text-decoration: 1px solid #ffffff underline;
+  
   transition: 0.5s;
 }
 .titleHoverBlack{
