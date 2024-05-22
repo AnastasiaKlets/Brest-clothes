@@ -205,6 +205,9 @@
     &_field {
         display: flex;
     }
+    &_indicators {
+        display: none;
+    }
     .catalog_item {
         box-shadow: none;
     }

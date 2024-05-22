@@ -95,6 +95,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     let baseSlides = slides;
     mobile ? perPage = elementsPerPageMobile : perPage = elementsPerPage;
     mobile ? gap = rowGap / 2 : gap = rowGap;
+    perPage == 1 ? gap = 0 : gap = gap;
 	let width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width) / perPage - (gap * (slides.length - 1) / slides.length)) + 'px';
 
     field.style.width = 100 * (slides.length + perPage - 1) / perPage + "%";
@@ -141,7 +142,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             dot.addEventListener('click', (e) => {
                 const slideTo = e.target.getAttribute('data-slide-to');
                 slideIndex = slideTo;
-                offset = deleteNotDigits(width) + gap * (slideTo - 1);
+                offset = (deleteNotDigits(width) + gap) * (slideTo - 1);
                 changeLicensesSlide(slideIndex);
                 changeActivity();
                 makeTimer(duration);
@@ -155,6 +156,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         mobile = window.matchMedia('(max-width: 992px)').matches;
         mobile ? perPage = elementsPerPageMobile : perPage = elementsPerPage;
         mobile ? gap = rowGap / 2 : gap = rowGap;
+        perPage == 1 ? gap = 0 : gap = gap;
         width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width) / perPage - (gap * (slides.length - 1) / slides.length)) + 'px';
         if (document.querySelector('.catalog_items') != null && width == '0px') {
             let lengths = [];
@@ -303,11 +305,15 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
     const end = () => {
-        if (endX < startX) {
+        let distance = 20;
+        if (containerSelector.includes('novelty')) {
+            distance = 150;
+        }
+        if (endX < startX && Math.abs(startX - endX) > distance) {
             moveNext();
             makeTimer(duration);
         }  
-        if (endX > startX) {
+        if (endX > startX && Math.abs(endX - startX) > distance) {
             movePrev();
             makeTimer(duration);
         }
@@ -406,6 +412,7 @@ if (document.querySelector('.novelty_field') != null) {
         fieldSelector: '.novelty_field',
         elementsPerPage: 3,
         elementsPerPageMobile: 1,
+        indicatorsClass: `novelty_indicators`,
         rowGap: 31,
         swipe: true,
     });
