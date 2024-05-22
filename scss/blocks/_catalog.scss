@@ -1,12 +1,19 @@
 .catalog {
     padding: 80px 0 272px;
     background: #ffffff;
+    .container{
+        width: 77%;
+    }
     &_side{
         justify-content: flex-start;
         gap: 70px;
-    }
-    .container{
-        width: 88.666%;
+        width: 10%;
+        position: absolute;
+        a{
+            img{
+                width: 99%;
+            }
+        }
     }
     &_wrapper {
         display: flex;
