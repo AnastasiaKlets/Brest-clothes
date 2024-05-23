@@ -30,8 +30,8 @@
 }
 
 #slider li.firstanimation {
-  -moz-animation:cycle 60s linear infinite;
-  -webkit-animation:cycle 60s linear infinite;
+  -moz-animation:cycle 6s linear infinite;
+  -webkit-animation:cycle 6s linear infinite;
 
 }
 .slider_wrapper_imgs{
@@ -39,8 +39,8 @@
 }
 
 #slider li.secondanimation {
-  -moz-animation:cycletwo 60s linear infinite;
-  -webkit-animation:cycletwo 60s linear infinite;
+  -moz-animation:cycletwo 6s linear infinite;
+  -webkit-animation:cycletwo 6s linear infinite;
 
 }
 #slider:hover li,
@@ -93,11 +93,13 @@
   position: absolute;
   z-index: 5;
   top: 56px;
+  width: 70%;
   left: 139px;
 }
 .slider_wrapper_img{
   position: absolute;
+  width: 36%;
   z-index: 5;
-  top: 56px;
+  top: -22px;
   left: -12px;
 }
