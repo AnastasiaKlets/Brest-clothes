@@ -1,0 +1,40 @@
+.hits {
+  margin-top: 40px;
+  margin-bottom: 120px;
+  &_wrapper {
+    overflow: hidden;
+  }
+  &_field {
+    display: flex;
+  }
+  &_indicators {
+    display: none;
+  }
+  &_slide {
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+    .button {
+      display: none;
+    }
+  }
+  &_slide.main {
+    .hits_image {
+      padding: 85.22% 0;
+    }
+  }
+  &_image {
+    position: relative;
+    width: 100%;
+    padding: 65.22% 0;
+    img {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
