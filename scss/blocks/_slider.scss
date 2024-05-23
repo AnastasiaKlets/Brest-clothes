@@ -30,18 +30,18 @@
 }
 
 #slider li.firstanimation {
-  -moz-animation:cycle 10s linear infinite;
-  -webkit-animation:cycle 10s linear infinite;
-  img{
-    width: 100%;
-  }
+  -moz-animation:cycle 60s linear infinite;
+  -webkit-animation:cycle 60s linear infinite;
+
 }
+.slider_wrapper_imgs{
+  width: 100%;
+}
+
 #slider li.secondanimation {
-  -moz-animation:cycletwo 10s linear infinite;
-  -webkit-animation:cycletwo 10s linear infinite;
-  img{
-    width: 100%;
-  }
+  -moz-animation:cycletwo 60s linear infinite;
+  -webkit-animation:cycletwo 60s linear infinite;
+
 }
 #slider:hover li,
 #slider:hover .progress-bar {
@@ -88,4 +88,16 @@
   98% { top:100%; opacity:0; z-index:0; }
   99% { top:-100%; opacity:0; z-index:-1; }
   100%{ top:-100%; opacity:0; z-index:-1; }
+}
+.slider_wrapper_text{
+  position: absolute;
+  z-index: 5;
+  top: 56px;
+  left: 139px;
+}
+.slider_wrapper_img{
+  position: absolute;
+  z-index: 5;
+  top: 56px;
+  left: -12px;
 }
