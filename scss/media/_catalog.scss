@@ -130,6 +130,24 @@
             background: #000;
         }
     }   
+    .hits {
+        margin-top: 64px;
+        &_slide.main {
+            .hits_image {
+                padding: 65.22% 0;
+            }
+            .button {
+                display: block;
+                position: absolute;
+                z-index: 3;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+                width: 86.66%;
+                height: 59px;
+            }
+        }
+    }
 }
 @media (max-width: 768px) {
 

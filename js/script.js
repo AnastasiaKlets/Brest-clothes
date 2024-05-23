@@ -108,11 +108,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
     if (slides.length != perPage) {
         for (let i = 0; i < (perPage - 1); i++) {
-            if (slideSelector.includes('licenses')) {
-                field.append(templates[i].cloneNode(true));
-            } else {
-                field.append(templates[i + 1].cloneNode(true));
-            }
+            field.append(templates[i + 1].cloneNode(true));
         }
         slidesNew = document.querySelectorAll(slideSelector);
     } else {
@@ -217,9 +213,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
 	function moveNext() {
-        if (!slideSelector.includes('assortment')) {
-            field.classList.add('trans-5')
-        }
+        field.classList.add('trans-5')
         if (offset >= (deleteNotDigits(width) + gap) * (slides.length - 1)) {
 			offset = 0;
 		} else {
@@ -237,9 +231,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
     function movePrev() {
-        if (!slideSelector.includes('assortment')) {
-            field.classList.add('trans-5')
-        }
+        field.classList.add('trans-5')
         if (offset < deleteNotDigits(width) ) {
 			offset = (deleteNotDigits(width) + gap) * (slides.length - 1);
 		} else {
@@ -265,23 +257,11 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
     function changeLicensesSlide (index) {
-        if (slideSelector.includes('licenses')) {
-            slidesNew.forEach(slide => {
-                slide.firstElementChild.classList.remove('absolute');
-                slide.style.height = '';
-            });
-            if (!mobile) {
-                slidesNew[index].style.height = '400px';
-                slidesNew[index].firstElementChild.classList.add('absolute');
-            }
-        }
-        if (slideSelector.includes('monthly') || slideSelector.includes('assortment')) {
+        if (slideSelector.includes('hits')) {
             slidesNew.forEach(slide => {
                 slide.classList.remove('main');
-                slide.lastElementChild.classList.remove('show');
             });
             slidesNew[index - 1].classList.add('main');
-            slidesNew[index - 1].lastElementChild.classList.add('show');
         }
     }
 
@@ -414,6 +394,20 @@ if (document.querySelector('.novelty_field') != null) {
         elementsPerPageMobile: 1,
         indicatorsClass: `novelty_indicators`,
         rowGap: 31,
+        swipe: true,
+    });
+}
+if (document.querySelector('.hits_field') != null) {
+    slider({
+        containerSelector: '.hits_container',
+        slideSelector: '.hits_slide',
+        wrapperSelector: '.hits_wrapper',
+        fieldSelector: '.hits_field',
+        elementsPerPage: 4,
+        elementsPerPageMobile: 1,
+        indicatorsClass: `novelty_indicators`,
+        duration: 3000,
+        rowGap: 30,
         swipe: true,
     });
 }
