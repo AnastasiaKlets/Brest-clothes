@@ -3,15 +3,13 @@
     gap: 60px;
     &_wrapper{
       &_img1{
-        position: relative;
         top: 25px;
-        width: 450px;
+        width: 430px;
         height: 637px;
       }
       &_img2{
-        position: relative;
         top: -100px;
-        width: 430px;
+        width: 410px;
         height: 661px;
       }
     }
@@ -19,51 +17,163 @@
 }
 @media (max-width:1600px) {
   .feedback{
-    gap: 50px;
+    gap: 45px;
     &_wrapper{
       &_img1{
-        position: relative;
-        top: 25px;
         width: 410px;
+        height: 615px;
       }
       &_img2{
-        position: relative;
-        top: -100px;
-        width: 390px;
+        width: 380px;
+        height: 620px;
       }
     }
   }
 }
-@media (max-width:1440px) {
-
+@media (max-width:1490px) {
+  .feedback{
+    gap: 30px;
+    &_wrapper{
+      padding: 35px 0 45px;
+      &_form{
+        &_inputs{
+          &_telName{
+            gap: 20px;
+          }
+        }
+      }
+      &_img1{
+        top: 64px;
+        width: 365px;
+        height: 546px;
+      }
+      &_img2{
+        top: -68px;
+        width: 340px;
+        height: 550px;
+      }
+    }
+  }
 }
-@media (max-width: 1200px) {
-
+@media (max-width: 1350px) {
+  .feedback{
+    gap: 0;
+    height: 570px;
+    &_wrapper{
+      padding: 25px 0 35px;
+      justify-content: center;
+      &_form{
+        &_inputs{
+          input{
+            padding: 0 0 0 9px;
+          }
+          &_telName{
+            gap: 20px;
+          }
+        }
+      }
+      &_img1{
+        top: 100px;
+        width: 350px;
+        height: 500px;
+      }
+      &_img2{
+        top: -35px;
+        width: 320px;
+        height: 550px;
+      }
+    }
+  }
 }
-@media (max-width: 992px) {
+@media (max-width: 1190px) {
+  .feedback{
+    height: 518px;
+    &_wrapper{
+      padding: 15px 0 15px;
+      &_form{
+        &_inputs{
+          input{
+            padding: 0 0 0 5px;
+          }
+          &_telName{
+            gap: 10px;
+          }
+        }
+      }
+      &_img1{
+        width: 280px;
+        height: 440px;
+      }
+      &_img2{
+        width: 270px;
+        height: 460px;
+      }
+    }
+  }
+}
+@media (max-width: 1020px) {
+  .feedback{
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    gap: 100px;
+    &_wrapper{
+      padding: 15px 0 15px;
+      &_imgs{
+        margin: 0 0 43px;
+        justify-content: center;
+      }
+      &_form{
+        width: 90%;
+        &_title1{
+          display: flex;
+          width: 100%;
+          justify-content: center;
+        }
+        button{
+          width: 100%;
+        }
+        &_inputs{
+          input{
+            padding: 0;
+          }
+          &_telName{
+            &_input{
+              height: 40px;
+            }
+            flex-direction: column;
+            gap: 10px;
+          }
+          &_mail{
+            height: 40px;
+          }
+          &_message{
+            height: 96px;
+          }
+        }
+      }
+      &_img1{
+        top: 25px;
+        width: 49%;
+        height: auto;
+      }
+      &_img2{
+        top: -50px;
+        width: 49%;
+        height: auto;
+      }
 
+    }
+  }
 }
 @media (max-width: 768px) {
-
+  .feedback{
+    gap: 80px;
+  }
 }
 @media (max-width: 480px) {
   .feedback{
     gap: 50px;
-    &_wrapper{
-      &_img1{
-        position: relative;
-        top: 25px;
-        width: 185px;
-        height: 264px;
 
-      }
-      &_img2{
-        position: relative;
-        top: -100px;
-        width: 175px;
-        height: 272px;
-
-      }
-    }
   }
 }
